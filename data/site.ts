@@ -6,12 +6,14 @@ export const siteConfig = {
 }
 
 export const schools = [
-  { slug: 'istituto-marangoni', name: 'Istituto Marangoni', cn: '马兰欧尼时装设计学院', mark: 'IM', category: 'Fashion' },
-  { slug: 'naba', name: 'NABA', cn: '新美术学院', mark: 'NABA', category: 'Design' },
-  { slug: 'polimoda', name: 'POLIMODA', cn: '波利莫达时装学院', mark: 'P', category: 'Fashion' },
+  { slug: 'politecnico-di-milano', name: 'POLITECNICO MILANO', cn: '米兰理工大学', mark: 'POLI', category: 'Design' },
+  { slug: 'istituto-marangoni', name: 'ISTITUTO MARANGONI', cn: '马兰欧尼学院', mark: 'IM', category: 'Fashion' },
+  { slug: 'marangoni-fashion-design', name: 'MARANGONI FASHION & DESIGN', cn: '马兰欧尼时装与设计学院', mark: 'M', category: 'Fashion' },
+  { slug: 'polimoda', name: 'POLIMODA', cn: '柏丽慕达时装学院', mark: 'P', category: 'Fashion' },
+  { slug: 'naba', name: 'NABA', cn: '米兰新美术学院', mark: 'NABA', category: 'Design' },
   { slug: 'domus-academy', name: 'DOMUS ACADEMY', cn: '多莫斯设计学院', mark: 'DA', category: 'Design' },
-  { slug: 'ied', name: 'IED', cn: '卡罗世纪学院', mark: 'IED', category: 'Design' },
-  { slug: 'politecnico-di-milano', name: 'POLITECNICO DI MILANO', cn: '米兰理工大学', mark: 'POLI', category: 'Design' },
+  { slug: 'istituto-secoli', name: 'ISTITUTO SECOLI', cn: '卡罗世纪服装学院', mark: 'S', category: 'Fashion' },
+  { slug: 'ied', name: 'IED', cn: 'IED欧洲设计学院', mark: 'IED', category: 'Design' },
 ]
 
 export const services = [
