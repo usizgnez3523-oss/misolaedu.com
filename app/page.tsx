@@ -19,6 +19,6 @@ export default function Home() {
       <section className="cases shell" id="cases"><div className="case-intro"><p className="eyebrow">SELECTED CASES</p><h2>成功案例</h2><p>案例内容与学生信息将在后续持续更新。</p></div><div className="case-stack">{['案例一','案例二','案例三','案例四'].map((name, index) => <article key={name}><div className={`case-image case-${index + 1}`}><span>{name}<br />CONTENT TO COME</span></div><p>案例内容待补充<br /><small>Fashion / Design</small></p></article>)}</div></section>
       <section className="contact-strip shell" id="events"><p className="eyebrow">START YOUR JOURNEY</p><h2>让你的设计，被世界看见。</h2><Link className="solid-button" href="/contact">预约免费咨询 <ArrowRight size={16} /></Link></section>
     </main>
-    <footer className="footer shell"><Brand /><div className="footer-contact"><span>☎　联系方式待填写</span><span>✉　邮箱待填写</span><span>⌖　地址待填写</span></div><div className="footer-bottom">© 2026 MISOLA 米岛时尚设计留学　All Rights Reserved.</div></footer>
+    <footer className="footer shell"><Brand /><div className="wechat-placeholder" aria-label="微信二维码待上传"><span>微信二维码</span><small>二维码待上传</small></div><div className="footer-contact"><span>☎　联系方式待填写</span><span>✉　邮箱待填写</span><span>⌖　地址待填写</span></div><div className="footer-bottom">© 2026 MISOLA 米岛时尚设计留学　All Rights Reserved.</div></footer>
   </div>
 }

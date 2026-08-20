@@ -25,5 +25,9 @@
 @media(max-width:760px){.school-visual{height:150px}.school-logo-frame{inset:16px 10px}.school-logo{height:82px}}
 .school>div:last-child span{font-size:15px;font-weight:700;color:#fff;letter-spacing:1px;margin-top:9px}.school>div:last-child strong{font-size:10px;color:#aaa;letter-spacing:1.2px}
 @media(max-width:760px){.school>div:last-child span{font-size:14px}}
+.footer{background:#000}
+.wechat-placeholder{width:96px;height:96px;border:1px dashed #555;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;color:#aaa;flex:0 0 auto}
+.wechat-placeholder span{font-size:11px;letter-spacing:1px}
+.wechat-placeholder small{font-size:9px;color:#666}
 .footer .brand-image{width:300px;height:95px}
 @media(max-width:760px){.footer .brand-image{width:230px;height:78px}}
