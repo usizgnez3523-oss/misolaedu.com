@@ -34,6 +34,8 @@
 
 .program-profile-content .profile-section:nth-child(2) .profile-group ul{display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;padding-left:20px}
 .program-profile-content .profile-section:nth-child(2) .profile-group li{white-space:nowrap}
+.program-profile-content .profile-section:nth-child(3) .profile-group ul{display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;padding-left:20px}
+.program-profile-content .profile-section:nth-child(3) .profile-group li{white-space:nowrap}
 
 .footer{display:grid;grid-template-columns:minmax(250px,1fr) minmax(210px,300px) 96px;gap:45px;align-items:center;background:#000}
 .footer .brand{margin-right:0}
