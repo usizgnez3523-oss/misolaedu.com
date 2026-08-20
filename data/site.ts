@@ -23,6 +23,41 @@ export const services = [
   { title: '海外支持', text: '海外生活支持、学业跟进与职业发展陪伴。', image: '/images/service-05.jpg' },
 ]
 
+export type Program = {
+  slug: string
+  title: string
+  english: string
+  category: string
+  image: string
+  intro: string[]
+  courses: string[]
+  careers: string[]
+  schools: string[]
+}
+
+const fashionIntro = '意大利时装以风格化的设计语言、精美面料、卓越工艺与完整产业链闻名世界。MISOLA将专业方向与意大利院校、时尚产业和作品集申请结合，帮助学生建立从灵感研究、设计开发到系列呈现的完整能力。'
+
+export const programs: Program[] = [
+  { slug: 'fashion-design', title: '服装设计', english: 'Fashion Design', category: 'FASHION', image: '/images/school-marangoni-classroom.jpg', intro: [fashionIntro, '服装设计师不只是设计服饰，也在创造和改变生活方式。课程将覆盖设计技巧、版型制作、系列创作与品牌语境，适合希望成为服装设计师并进入意大利时尚产业的学生。'], courses: ['设计结构学', '作品集设计', '艺术与服装史', '作品集研发与专业作品集筹备', '时尚趋势研究'], careers: ['服装设计师', '品牌时尚顾问', '系列设计师', '时装工作室设计师'], schools: ['马兰欧尼学院', '柏丽慕达时装学院', '卡罗世纪服装学院'] },
+  { slug: 'menswear-fashion-design', title: '男装设计', english: 'Menswear Fashion Design', category: 'FASHION', image: '/images/service-02.jpg', intro: ['男装是一个重视合身、线条、材料与细节的专业方向。随着男装市场不断细分，设计师需要同时掌握创造力、制版裁剪和系列开发能力。', '马兰欧尼提供男装设计方向，卡罗世纪则以男装制版和手缝工艺见长，适合希望深入研究男装结构与制作的学生。'], courses: ['服装史与文化', '材料科学与技术', '男装设计', '男装系列设计', '视觉研究', '设计模式原型'], careers: ['男装设计师', '男装配饰设计师', '时装插画师', '男装趋势预测师', '产品经理'], schools: ['马兰欧尼学院', '卡罗世纪服装学院'] },
+  { slug: 'sustainable-fashion-design', title: '可持续服装设计', english: 'Sustainable Fashion Design', category: 'FASHION', image: '/images/school-naba-studio.jpg', intro: ['可持续时尚关注材料、生产、消费和品牌社会责任。随着环保材料、循环系统和道德制造成为行业的重要议题，可持续服装设计已经成为时尚产业的新方向。', '课程帮助学生以可持续视角研究趋势，选择环保、可再生和可降解面料，并建立循环时尚系统。'], courses: ['可持续设计流程和技术', '当代时尚与趋势', '可持续材料选择和采购', '环保纺织品开发', '道德制造与循环时尚系统'], careers: ['可持续服装设计师', '时装品牌可持续性设计顾问', '材料研究员', '可持续时尚策划'], schools: ['柏丽慕达时装学院'] },
+  { slug: 'costume-design', title: '戏服设计', english: 'Costume Design', category: 'FASHION', image: '/images/school-ied-fashion.jpg', intro: ['戏服设计将服装、艺术、影视和舞台叙事结合。设计师需要研究服装文化与历史，理解剧本和人物性格，并完成从视觉研究、草图、面料到成衣制作的完整过程。', '这是服装设计的延伸方向，适合对电影、戏剧、舞台与造型叙事感兴趣的学生。'], courses: ['戏剧服装史', '纺织品设计', '面料类型', '配饰设计', '戏服设计', '视觉陈列技术'], careers: ['戏服设计师', '影视服装设计师', '舞台造型师', '服装制作与造型顾问'], schools: ['米兰新美术学院'] },
+  { slug: 'fashion-prototyping', title: '样衣制作', english: 'Fashion Prototyping', category: 'FASHION', image: '/images/school-secoli-studio.jpg', intro: ['样衣制作位于设计构思与大规模生产之间，是检验款式、尺寸、面料、色彩和工艺可行性的关键环节。样衣师需要理解人体结构、版型与缝制，并与设计师、制版师和生产部门高效协作。'], courses: ['服装风格', '面料分析', '男女装制版', '男女装缝制', '工业生产流程', '时间与方法分析', '样衣制作'], careers: ['样衣师', '原型设计师', '品牌设计部门样衣制作', '服装工厂产品开发', '定制服装工作室'], schools: ['卡罗世纪服装学院'] },
+  { slug: 'digital-fashion', title: '数字时尚', english: 'Digital Fashion', category: 'FASHION BUSINESS', image: '/images/service-05.jpg', intro: ['数字时尚通过三维建模、数字渲染、虚拟服装和数据技术，重新思考产品开发、传播、运营与销售。它适合希望将时尚创造力与数字技术、商业和新媒体结合的学生。'], courses: ['时尚运营', '产品开发', '营销与零售', '时尚创业', '数字产品与品牌传播'], careers: ['电子商务经理', '数字经理', '零售经理', '产品开发经理', '时尚营销经理'], schools: ['柏丽慕达时装学院'] },
+  { slug: 'knitwear-design', title: '针织服装设计', english: 'Knitwear Design', category: 'TEXTILE', image: '/images/service-02.jpg', intro: ['针织设计融合色彩、图纹、纱线、结构与工艺，是兼具实用性和艺术性的时尚方向。学生将从材料与织造出发，完成创意研究、原型制作和针织系列开发。'], courses: ['针织品设计', '创意原型制作', '制版', '针织纺织操作', '刺绣', '当代纺织实践'], careers: ['针织品设计师', '自由设计师', '编织设计师', '产品经理', '生产经理'], schools: ['米兰新美术学院'] },
+  { slug: 'fashion-retail-management', title: '时尚零售管理', english: 'Fashion Retail Management', category: 'FASHION BUSINESS', image: '/images/school-polimoda-campus.jpg', intro: ['时尚零售管理结合时尚知识、品牌管理与商业运营，研究零售模式、消费行为、国际组织管理、时尚营销和买手体系，适合对品牌推广和商业管理感兴趣的学生。'], courses: ['商业技术', '时尚营销', '时尚运营', '零售管理', '时装采购和销售', '电子商务', '消费者行为'], careers: ['零售经理', '商店经理', '销售经理', '零售买手', '分销经理'], schools: ['柏丽慕达时装学院'] },
+  { slug: 'product-design', title: '产品设计', english: 'Product Design', category: 'DESIGN', image: '/images/school-politecnico-campus.jpg', intro: ['产品设计从用户、材料、结构和制造出发，训练学生将研究转化为清晰的设计概念和可落地的产品方案。'], courses: ['设计研究', '产品概念开发', '材料与工艺', '模型制作', '用户体验', '产品展示'], careers: ['产品设计师', '工业设计师', '产品研发', '用户体验设计师'], schools: ['米兰理工大学', '多莫斯设计学院'] },
+  { slug: 'fashion-business-communication', title: '服装商业传播与新媒体', english: 'Fashion Business Communication & New Media', category: 'FASHION BUSINESS', image: '/images/service-05.jpg', intro: ['时尚品牌需要通过视觉、内容、社交媒体和跨界合作建立与消费者的联系。该方向培养学生理解品牌语言、造型传播、数字媒体和整合营销。'], courses: ['商业社交媒体', '传统和数字媒体', '广告和市场营销策略', '服装品牌推广', '图像处理与平面设计', '视觉传播'], careers: ['数字营销经理', '传媒经理', '传播经理', '市场营销经理', '多媒体内容设计师'], schools: ['马兰欧尼时装与设计学院'] },
+  { slug: 'graphic-design', title: '平面设计', english: 'Graphic Design', category: 'DESIGN', image: '/images/service-03.jpg', intro: ['平面设计通过字体、图形、图像和信息结构建立视觉沟通。课程适合希望进入品牌、编辑、广告、数字内容和时尚视觉传播领域的学生。'], courses: ['视觉语言', '字体设计', '品牌识别', '编辑设计', '数字图像', '动态与交互视觉'], careers: ['平面设计师', '品牌设计师', '艺术指导', '视觉设计师', '编辑设计师'], schools: ['米兰新美术学院', 'IED欧洲设计学院'] },
+  { slug: 'fashion-business', title: '服装商业', english: 'Fashion Business', category: 'FASHION BUSINESS', image: '/images/school-domus-campus.jpg', intro: ['服装商业结合时尚创意与经济管理，帮助学生理解品牌运营、生产、传播、营销和零售体系，培养面向时尚企业的商业判断力。'], courses: ['经济', '金融', '市场营销', '品牌推广', '项目管理', '视觉营销', '时尚心理学'], careers: ['营销经理', '品牌经理', '产品经理', '采购员', '零售经理', '视觉营销'], schools: ['马兰欧尼时装与设计学院', '柏丽慕达时装学院'] },
+  { slug: 'car-design', title: '汽车设计', english: 'Car Design', category: 'DESIGN', image: '/images/school-politecnico-campus.jpg', intro: ['汽车设计融合交通工具造型、人体工程学、材料、技术和未来出行研究，训练学生从概念草图到数字模型建立完整设计表达。'], courses: ['交通工具设计史', '造型语言', '数字建模', '交通工具内饰', '材料与制造', '概念展示'], careers: ['汽车设计师', '交通工具设计师', '内饰设计师', '数字模型师'], schools: ['IED欧洲设计学院', '米兰理工大学'] },
+  { slug: 'luxury-management', title: '奢侈品管理', english: 'Luxury Management', category: 'LUXURY BUSINESS', image: '/images/school-polimoda-campus.jpg', intro: ['奢侈品管理结合品牌历史、产品品质、传播、零售和客户关系，适合希望进入时尚与奢侈品企业管理、营销和品牌战略岗位的学生。'], courses: ['奢侈品生产与品牌管理', '客户关系管理', '奢侈品零售管理', '奢侈品传播', '奢侈品造型'], careers: ['营销经理', '传播经理', '品牌经理', '业务经理', '采购经理', '零售经理'], schools: ['马兰欧尼时装与设计学院', '柏丽慕达时装学院', '多莫斯设计学院'] },
+  { slug: 'fashion-buying', title: '服装买手', english: 'Fashion Buying', category: 'FASHION BUSINESS', image: '/images/school-marangoni-classroom.jpg', intro: ['服装买手以销售数据、潮流趋势、消费群体和库存流动为依据，参与选品、采购、促销与零售策略制定，适合拥有时尚兴趣和商业基础的学生。'], courses: ['服装营销管理', '买手概论', '买手技巧与采购', '当代时尚概况', '高级采购'], careers: ['买手', '零售买手', '产品经理', '采购经理', '促销活动策划'], schools: ['马兰欧尼时装与设计学院', '柏丽慕达时装学院'] },
+  { slug: 'industrial-design', title: '工业设计', english: 'Industrial Design', category: 'DESIGN', image: '/images/school-politecnico-campus.jpg', intro: ['工业设计关注产品系统、材料、制造和用户体验，要求学生在功能、形式、技术与社会需求之间建立平衡。'], courses: ['设计方法', '产品系统', '材料与制造', '模型与原型', '设计表达', '可持续设计'], careers: ['工业设计师', '产品设计师', '研发设计师', '设计研究员'], schools: ['米兰理工大学', 'IED欧洲设计学院'] },
+  { slug: 'footwear-accessories-design', title: '鞋类及配饰设计', english: 'Footwear and Accessories Design', category: 'FASHION', image: '/images/service-04.jpg', intro: ['鞋类和配饰设计融合材料、结构、功能与品牌语言。意大利皮革产业和工艺传统为学生提供了研究鞋履、箱包、皮具与奢侈品配饰的专业环境。'], courses: ['鞋履设计', '工匠技术', '皮革研究与技术', '时尚插画', '版型与制作', '配饰产品', '奢侈品材料与产品管理'], careers: ['配饰设计师', '产品研发员', '艺术指导', '产品研究员', '趋势研究员'], schools: ['马兰欧尼时装与设计学院', '柏丽慕达时装学院'] },
+  { slug: 'jewellery-design', title: '珠宝设计', english: 'Jewellery Design', category: 'DESIGN', image: '/images/school-naba-studio.jpg', intro: ['珠宝设计结合材料研究、造型、工艺、品牌和产品开发，训练学生将概念研究转化为具有佩戴性和市场价值的珠宝系列。'], courses: ['珠宝设计基础', '材料与宝石', '首饰结构', '手工工艺', '系列开发', '珠宝品牌与展示'], careers: ['珠宝设计师', '首饰产品开发', '工艺设计师', '珠宝品牌视觉设计'], schools: ['马兰欧尼时装与设计学院', '米兰新美术学院'] },
+]
+
 export const schoolDetails = {
   'istituto-marangoni': {
     sections: [
