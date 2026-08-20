@@ -14,3 +14,4 @@
 
 .school-directory>a{grid-template-columns:1fr 30px}
 @media(max-width:760px){.school-directory>a{grid-template-columns:1fr 20px}}
+.detail-mark{display:none!important}
