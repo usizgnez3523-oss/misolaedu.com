@@ -1,10 +1,10 @@
-import { ArrowRight, GraduationCap, Menu, PencilRuler, Plane, UsersRound } from 'lucide-react'
+import { ArrowRight, Building2, GraduationCap, Menu, PencilRuler, Plane, UsersRound } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { schools, services, siteConfig } from '@/data/site'
 
 function Brand() { return <Link className="brand" href="/"><Image className="brand-image" src="/images/logo-main.jpg" alt="MISOLA 米岛时尚设计留学" width={1600} height={900} priority /></Link> }
-const icons = [GraduationCap, PencilRuler, ArrowRight, Plane, UsersRound]
+const icons = [GraduationCap, PencilRuler, Building2, Plane, UsersRound]
 
 export default function Home() {
   const jsonLd = { '@context': 'https://schema.org', '@type': 'EducationalOrganization', name: siteConfig.name, url: siteConfig.url, description: siteConfig.description, areaServed: 'CN', knowsAbout: ['Italian Fashion Design', 'Fashion Education'] }
