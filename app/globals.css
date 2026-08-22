@@ -73,3 +73,10 @@
 .media-partners-visual img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;filter:contrast(1.03)}
 @media(max-width:760px){.media-partners{padding:60px 0}.media-partners-visual{height:520px;min-height:0}.media-partners-visual img{width:auto;max-width:none;height:100%;object-fit:cover;object-position:center}}
 
+.media-partners-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.media-partner-card{margin:0;aspect-ratio:880/382;border:1px solid #292929;background:#070809;overflow:hidden}
+.media-partner-card img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease,filter .3s ease}
+.media-partner-card:hover img{transform:scale(1.025);filter:brightness(1.08)}
+@media(max-width:1100px){.media-partners-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.media-partners-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}}
+
