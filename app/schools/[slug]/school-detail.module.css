@@ -1,3 +1,74 @@
+.schoolIntroMedia {
+  margin: 44px 0 78px;
+}
+
+.schoolIntroMediaGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(240px, 0.85fr);
+  gap: 16px;
+}
+
+.schoolIntroPhoto {
+  min-width: 0;
+}
+
+.schoolIntroPhotoSecondary {
+  min-width: 0;
+}
+
+.schoolIntroPhotoMain {
+  grid-row: span 2;
+}
+
+.schoolIntroImageFrame {
+  position: relative;
+  min-height: 210px;
+  overflow: hidden;
+  background: #101216;
+}
+
+.schoolIntroPhotoMain .schoolIntroImageFrame {
+  min-height: 430px;
+}
+
+.schoolIntroImageFrame img {
+  object-fit: cover;
+  transition: transform 500ms ease, filter 500ms ease;
+}
+
+.schoolIntroPhoto:hover .schoolIntroImageFrame img {
+  transform: scale(1.035);
+  filter: contrast(1.05);
+}
+
+.schoolIntroPhoto figcaption {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 12px 0 0;
+  color: #8d939e;
+  font: 10px 'DM Mono', monospace;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.schoolIntroPhoto figcaption span {
+  color: #555d68;
+}
+
+.schoolIntroPhoto figcaption strong {
+  color: #dfe2e6;
+  font-weight: 400;
+}
+
+.schoolIntroMediaNote {
+  margin: 22px 0 0;
+  color: #555d68;
+  font: 10px 'DM Mono', monospace;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
 .bilingualProfileGroup h3 {
   display: grid;
   gap: 4px;
@@ -52,6 +123,29 @@
 }
 
 @media (max-width: 760px) {
+  .schoolIntroMedia {
+    margin: 32px 0 52px;
+  }
+
+  .schoolIntroMediaGrid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .schoolIntroPhotoMain {
+    grid-row: auto;
+  }
+
+  .schoolIntroImageFrame,
+  .schoolIntroPhotoMain .schoolIntroImageFrame {
+    min-height: 260px;
+  }
+
+  .schoolIntroPhoto figcaption {
+    gap: 10px;
+    font-size: 9px;
+  }
+
   .bilingualSpecialtyList {
     grid-template-columns: 1fr !important;
   }

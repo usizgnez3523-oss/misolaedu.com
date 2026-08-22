@@ -1,7 +1,9 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import {
   schoolDetails,
+  schoolIntroMedia,
   schools,
   schoolSpecialtyGroupTranslations,
   schoolSpecialtyTranslations,
@@ -69,6 +71,13 @@ export default async function SchoolDetail({
   const detail = schoolDetails[
     slug as keyof typeof schoolDetails
   ] as SchoolDetailContent | undefined
+  const introMedia = schoolIntroMedia[school.slug] ?? [
+    {
+      src: school.image,
+      alt: school.cn,
+      caption: `${school.name} / ${school.category}`,
+    },
+  ]
 
   return (
     <main className="inner-page shell school-detail school-detail-clean-v2">
@@ -78,6 +87,45 @@ export default async function SchoolDetail({
       <p className="eyebrow">{school.category} / SCHOOL PROFILE</p>
       <h1>{school.name}</h1>
       <h2 className="school-detail-cn">{school.cn}</h2>
+      <section
+        className={styles.schoolIntroMedia}
+        aria-label={`${school.cn}视觉资料`}
+      >
+        <div className={styles.schoolIntroMediaGrid}>
+          {introMedia.map((media, index) => (
+            <figure
+              className={[
+                styles.schoolIntroPhoto,
+                index === 0
+                  ? styles.schoolIntroPhotoMain
+                  : styles.schoolIntroPhotoSecondary,
+              ].join(' ')}
+              key={media.src}
+            >
+              <div className={styles.schoolIntroImageFrame}>
+                <Image
+                  src={media.src}
+                  alt={media.alt}
+                  fill
+                  priority={index === 0}
+                  sizes={
+                    index === 0
+                      ? '(max-width: 760px) 100vw, 66vw'
+                      : '(max-width: 760px) 100vw, 33vw'
+                  }
+                />
+              </div>
+              <figcaption>
+                <span>{String(index + 1).padStart(2, '0')}</span>
+                <strong>{media.caption}</strong>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+        <p className={styles.schoolIntroMediaNote}>
+          视觉资料 / 课程现场 / 设计语境
+        </p>
+      </section>
       {detail ? (
         <div className="school-profile-content">
           {detail.sections.map((section) => (

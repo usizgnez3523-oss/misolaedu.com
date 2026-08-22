@@ -15,6 +15,69 @@ export const schools = [
   { slug: 'ied', name: 'IED', cn: 'IED欧洲设计学院', mark: 'IED', logo: '/images/school-ied-logo-user.jpg', image: '/images/school-ied-card.jpg', category: 'Design' },
 ]
 
+export type SchoolIntroMedia = {
+  src: string
+  alt: string
+  caption: string
+}
+
+export const schoolIntroMedia: Record<string, readonly SchoolIntroMedia[]> = {
+  'politecnico-di-milano': [
+    {
+      src: '/images/school-politecnico-campus.jpg',
+      alt: '米兰理工大学 Bovisa 校区',
+      caption: 'MILANO BOVISA / DESIGN CAMPUS',
+    },
+  ],
+  'istituto-marangoni': [
+    {
+      src: '/images/school-marangoni-classroom.jpg',
+      alt: '马兰欧尼时装与设计学院课堂',
+      caption: 'ISTITUTO MARANGONI / MILANO',
+    },
+    {
+      src: '/images/school-marangoni-runway.jpg',
+      alt: '马兰欧尼学院时装秀',
+      caption: 'FASHION / INDUSTRY / PRACTICE',
+    },
+  ],
+  'domus-academy': [
+    {
+      src: '/images/school-domus-campus.jpg',
+      alt: '多莫斯设计学院校园',
+      caption: 'DOMUS ACADEMY / MILANO',
+    },
+  ],
+  'istituto-secoli': [
+    {
+      src: '/images/school-secoli-studio.jpg',
+      alt: '卡罗世纪服装学院服装工作室',
+      caption: 'ISTITUTO SECOLI / CRAFT & PATTERN',
+    },
+  ],
+  naba: [
+    {
+      src: '/images/school-naba-studio.jpg',
+      alt: '米兰新美术学院设计工作室',
+      caption: 'NABA / ART & DESIGN',
+    },
+  ],
+  polimoda: [
+    {
+      src: '/images/school-polimoda-campus.jpg',
+      alt: '柏丽慕达时装学院校园',
+      caption: 'POLIMODA / FLORENCE',
+    },
+  ],
+  ied: [
+    {
+      src: '/images/school-ied-fashion.jpg',
+      alt: 'IED 欧洲设计学院时尚课堂',
+      caption: 'IED / DESIGN & INDUSTRY',
+    },
+  ],
+}
+
 export const services = [
   { title: '留学申请规划', text: '个性化申请方案，精准匹配意大利院校与专业。', image: '/images/service-01.jpg' },
   { title: '作品集指导', text: '专业作品集老师一对一辅导，完成从创意开发到项目制作。', image: '/images/service-02.jpg' },
@@ -71,15 +134,18 @@ export const schoolDetails = {
           { title: 'Beauty & Luxury', items: ['Fragrance & Cosmetics', 'Luxury Brand Management', 'Fashion & Luxury Business'] },
           { title: 'Design 设计方向', items: ['Interior Design', 'Product & Furniture Design', 'Digital Art Direction', 'Fine Jewellery Design', 'Design Management & Strategic Innovation', 'Immersive Experience Digital Design'] },
         ],
-        paragraphs: ['马兰欧尼2026/27米兰校区已经同时覆盖一年制和两年制硕士课程。米兰时装学院一年制硕士包括服装设计、时尚与奢侈品牌管理、时尚传播、买手与营销等多个方向。'],
+        paragraphs: ['课程覆盖1年制及2年制硕士；服装学院方向主要集中在服装设计、时尚造型与传播、时尚与奢侈品牌管理、时尚买手与产品管理等，设计学院还覆盖室内、产品与家具、数字艺术指导等方向。'],
       },
       {
         title: '申请要求',
         groups: [
-          { title: '本科通常要求', items: ['高中毕业或同等学历', '英语授课课程一般需要英语能力证明', '部分AFAM课程需要通过学校面试/入学评估'] },
-          { title: '硕士通常要求', items: ['本科毕业或等同学历', '相关专业背景或相应专业经历', 'CV', '动机材料', 'Portfolio（根据课程要求）', '英语/意大利语语言证明'] },
+          { title: '基本申请要求', items: ['本科学士学位或同等学历', '意大利语授课课程建议意大利语B2；英语授课课程 IELTS 5.5（单项不低于5.5）', '创意类课程须提交 Portfolio', '部分2年制 AFAM 硕士须与专业导师进行一对一面试'] },
+          { title: '申请材料', items: ['CV', 'Motivation Letter', '本科成绩单', '推荐信', '护照', '创意类作品集', '语言证明（按课程要求）'] },
         ],
-        paragraphs: ['根据目前整理的米兰校区信息显示，硕士课程通常要求大学毕业，英语授课课程可参考 IELTS 5.0，建议6.0；不同专业的具体要求仍应以对应课程页面为准。'],
+      paragraphs: [
+        '按当前课程资料，1年制AFAM硕士主要为60 CFA/ECTS一级硕士文凭，现阶段不按中国同等硕士学历认证；2年制AFAM硕士为120 CFA/ECTS二级硕士文凭，并可按相关规定办理中国学历学位认证。',
+        '非AFAM课程或仍处于认证评估阶段的课程，认证结果以申请当年学院及相关部门公布的信息为准。'
+      ],
       },
       {
         title: '申请时间线',
@@ -93,7 +159,7 @@ export const schoolDetails = {
       },
       {
         title: '费用 & 奖学金',
-        paragraphs: ['以米兰校区2026年秋季一年制硕士为例：', '学费约 €33,500/年；注册费约 €5,500；合计约 €39,000。', '具体专业费用可能存在差异。', '奖学金方面，马兰欧尼针对不同课程和入学季设置奖学金。例如2026 Autumn Early Talent Scholarship，欧洲校区最高可获得€5,000学费减免；部分专项奖学金针对硕士课程最高可达到€10,000。'],
+        paragraphs: ['2026年春季入学：一年制硕士学费 €33,000，注册费 €5,500，合计 €38,500。', '2026年秋季入学：部分一年制硕士为 €33,000–€33,500，注册费 €5,500，合计约 €38,500–€39,000；香水与化妆品方向学费约 €33,100。', '两年制硕士学费约 €22,450/年，注册费 €5,500/年，合计约 €27,950/年。', '不同专业、入学时间及学年费用可能调整，实际以申请当年学院公布的信息为准。', '奖学金方面，马兰欧尼针对不同课程和入学季设置奖学金。例如2026 Autumn Early Talent Scholarship，欧洲校区最高可获得€5,000学费减免；部分专项奖学金针对硕士课程最高可达到€10,000。'],
       },
     ],
   },
@@ -101,18 +167,18 @@ export const schoolDetails = {
     sections: [
       { title: '院校介绍', paragraphs: ['Domus Academy 多莫斯设计学院1982年创立于米兰，是意大利最早的研究生设计教育机构之一。', '学校最具代表性的教育理念是 Learning by Designing，即通过真实项目、设计实践和跨学科合作学习。学校早期就曾邀请 Ettore Sottsass、Alessandro Mendini、Philippe Starck 等设计界人物参与教学，长期强调设计研究、创新、跨学科和产业合作。', '目前学校的硕士课程覆盖 Design、Fashion、Experience、Business 四大领域，并提供意大利MUR认可的Academic Master以及英国体系的Dual Award课程。', 'Design · Innovation · Research', '跨学科设计与创新'] },
       { title: '热门专业', groups: [{ title: 'Fashion', items: ['Fashion Design', 'Fashion Management', 'Fashion Styling & Visual Merchandising', 'Fashion: Design, Art & Technology'] }, { title: 'Design', items: ['Product Design', 'Interaction Design', 'Service Design & UX', 'Interior & Living Design', 'Visual Brand Design', 'Design Futures', 'Design x AI'] }, { title: 'Business', items: ['Business Design', 'Fashion Management'] }] },
-      { title: '申请要求', groups: [{ title: '硕士通常要求', items: ['本科或同等学历', '相关专业背景优先', '部分课程接受其他专业背景申请者', 'Portfolio', 'CV', 'Motivation Letter', '英语语言能力'] }], paragraphs: ['Domus Academy部分课程对跨专业申请比较开放。例如 Fashion Design 对非时尚背景申请者也开放，但要求申请人通过作品集展示完整的设计过程。'] },
+      { title: '申请要求', groups: [{ title: '硕士申请要求', items: ['本科或同等学历；部分课程接受相关行业工作经验', 'IELTS 5.0（Design Futures、Design and Artificial Intelligence等课程）', 'IELTS 5.5，单项不低于5.5（部分Dual Award课程）', 'Portfolio按课程要求准备，部分课程非强制', 'CV、Motivation Letter、本科成绩单、推荐信', 'GPA较低、在读申请或课程要求时安排面试'] }], paragraphs: ['按当前课程资料，Design Futures、Design and Artificial Intelligence为约11个月课程；Product Design、Interior & Living Design、Urban Vision and Architectural Design、Interaction Design、Service Design & UX等Dual Award课程约14个月。', '纯Domus课程通常对应60 ECTS的意大利一级研究生学位且不按中国同等硕士学历认证；Dual Award课程约90 ECTS，并可获得意大利MIUR与英国合作院校双学位/双认证，具体以课程当年安排为准。'] },
       { title: '申请时间线', paragraphs: ['Domus Academy的很多硕士课程一年有多个入学时间：February、September、November。因此相比公立大学，申请灵活度比较高。'], timeline: [{ label: '提前9–12个月', text: '确定专业' }, { label: '提前6–9个月', text: '准备作品集' }, { label: '提前3–6个月', text: '递交申请' }, { label: '录取后', text: '注册 → 签证' }] },
-      { title: '费用 & 奖学金', paragraphs: ['以目前官网公开的 Fashion Design / Fashion Management 一年制Academic Master为例：非欧盟学生约 €28,900，其中 Pre-enrollment €3,000，Tuition €25,900。Academic Master另有相应学位费用。', '如果选择Dual Award，非欧盟学生约 €32,900。学校还提供不同形式的奖学金和项目竞赛，针对2027年2月入学的项目奖学金最高可覆盖 €8,000 学费。'] },
+      { title: '费用 & 奖学金', paragraphs: ['纯Domus课程非欧盟学费约 €28,900；Dual Award约 €32,900；入学季主要为2月、9月、11月（以专业为准）。', '学校还提供不同形式的奖学金和项目竞赛，针对2027年2月入学的项目奖学金最高可覆盖 €8,000 学费。'] },
     ],
   },
   'istituto-secoli': {
     sections: [
       { title: '院校介绍', paragraphs: ['卡罗世纪服装学院（Istituto Secoli）成立于1934年，位于米兰，是意大利历史悠久的专业服装教育机构。', '与马兰欧尼、IED等综合型设计学院不同，卡罗世纪最大的特色是服装设计、制版、样衣与工艺。学校长期专注于服装产业实践，与 Armani、Versace、Prada、Zegna、Gucci、Fendi、Dolce & Gabbana 等时尚企业保持合作关系。相关资料显示，学校自成立以来培养了超过6万名设计师、制版师及相关专业人才。', '因此，如果学生明确想走服装设计、Pattern Making、Tailoring、Garment Construction，卡罗世纪是非常有特色的选择。', 'Pattern Making · Craftsmanship · Made in Italy', '服装制版与工艺'] },
       { title: '热门专业', groups: [{ title: '本科', items: ['Fashion Design & Pattern Making'] }, { title: '硕士', items: ["Women's Wear Pattern Making", "Men's Wear Pattern Making & Tailoring", 'Lingerie & Bridal Wear Pattern Making'] }, { title: '强化 / 进修', items: ['Sample Making', "Women's / Men's Pattern Making", 'CAD Pattern Making', 'Fashion Design', 'Sewing'] }], paragraphs: ['学校目前还在米兰及诺瓦拉设置教学空间，其中诺瓦拉更加接近意大利服装工业生产体系。'] },
-      { title: '申请要求', groups: [{ title: '本科', items: ['高中毕业或同等学历', '服装设计与制版本科主要为意大利语授课', '意大利语建议B1'] }, { title: '硕士', items: ['服装相关本科背景，或具有相关专业工作经验', '意大利语能力', '部分课程可以申请英语同步翻译'] }], paragraphs: ['学校的相关课程资料显示，硕士申请一般需要服装相关学历或专业工作经历。'] },
+      { title: '申请要求', groups: [{ title: '本科', items: ['高中毕业或同等学历', '服装设计与制版本科主要为意大利语授课', '意大利语建议B1'] }, { title: '硕士', items: ['服装相关本科背景，或具有相关专业工作经验', '意大利/英语能力按课程要求准备', 'IELTS 5.0或TOEFL iBT 68（以课程要求为准）', 'Portfolio约10–15个项目', 'CV、Motivation Letter、成绩单、推荐信', '需参加面试'] }], paragraphs: ['学校资料显示，米兰校区女性制版、男性制版、高级定制与婚纱、针织技术、男装剪裁等研究生课程多为1年制，通常10月开学。'] },
       { title: '申请时间线', paragraphs: ['卡罗世纪的主力长期课程以秋季入学为主。本科通常为10月入学，硕士通常为9月或秋季入学。另外学校会提供暑期课程、预备课程及短期课程。'], timeline: [{ label: '提前6–9个月', text: '准备语言 + 专业基础' }, { label: '提前3–6个月', text: '完成申请' }, { label: '录取后', text: '注册 → 签证' }] },
-      { title: '费用 & 奖学金', paragraphs: ['2026/27学年参考：本科 €11,800/年，注册费 €2,000，合计 €13,800/年；硕士 €18,700，注册费 €2,000，合计 €20,700；强化课程 €11,800–12,000，注册费 €2,000，合计 €13,800–14,000。部分课程如果需要英语同步翻译，还需要额外支付相关费用。'] },
+      { title: '费用 & 奖学金', paragraphs: ['研究生课程参考总费用约 €20,700（学费 €18,700 + 注册费 €2,000）；如课程需要英语同步翻译，可能另收费用。实际以当年校方报价为准。', '本科及强化课程费用需按具体项目另行确认。'] },
     ],
   },
   'politecnico-di-milano': {
@@ -137,9 +203,9 @@ export const schoolDetails = {
     sections: [
       { title: '院校介绍', paragraphs: ['NABA（Nuova Accademia di Belle Arti）1980年成立于米兰，是意大利重要的私立艺术与设计学院之一。学校1981年获得意大利教育部认可，属于意大利AFAM高等艺术与音乐教育体系，受意大利大学与研究部（MUR）监管。', 'NABA的优势在于 Fashion、Design、Visual Arts、Communication 与 New Technologies，属于比较典型的综合型艺术设计学院。学校官方目前称其为意大利最大的艺术学院之一，并在QS Art & Design排名中进入全球Top 50。', 'Art · Design · Fashion · New Media', '综合艺术与设计'] },
       { title: '热门专业', groups: [{ title: 'Fashion', items: ['Fashion Design', 'Fashion Design & Management', 'Fashion Digital Marketing', 'Fashion Management相关方向'] }, { title: 'Design', items: ['Product and Service Design', 'Interior Design', 'Social Design', 'Design Innovation'] }, { title: 'Communication', items: ['Visual Design', 'Graphic Design', 'Creative Advertising', 'Communication'] }, { title: 'Media & Technology', items: ['User Experience Design', 'Media Design', 'New Technologies'] }, { title: 'Academic Master', items: ['Luxury Brand Management', 'Italian Design', 'Interior and Living Design', 'Fashion Digital Marketing', 'Sneaker Design'] }] },
-      { title: '申请要求', groups: [{ title: '研究生申请通常需要', items: ['本科 / First-Level Academic Diploma', '成绩单', 'CV', 'Passport', 'Motivation Letter', 'Portfolio', '语言证明'] }], paragraphs: ['不同专业的作品集要求有所区别。目前官方明确要求多数 Master of Arts / Academic Master 申请提交作品集，但部分课程可以免作品集。英语授课通常需要 IELTS 5.0 或相应水平，部分意大利语课程要求意大利语B1。'] },
+      { title: '申请要求', groups: [{ title: '研究生申请通常需要', items: ['本科 / First-Level Academic Diploma', '成绩单、CV、Passport、Motivation Letter', 'IELTS 5.5或TOEFL iBT 68（如无证书，部分课程可参加校内语言测试）', 'Portfolio（设计、时尚及视觉类课程通常需要）', '推荐信及其他课程要求材料', '部分课程可能安排面试'] }], paragraphs: ['按当前课程资料，NABA部分1年制AFAM课程约 €23,800，部分1年制课程约 €22,300；2年制AFAM课程按专业约 €20,800/年或 €22,250/年。1年制AFAM通常为60 CFA，当前不按中国同等硕士学历认证；2年制AFAM通常为120 CFA，可按相关规定办理中国学历学位认证。', '具体作品集、面试、语言及费用要求按专业和入学年份确认。'] },
       { title: '申请时间线', paragraphs: ['NABA的主要入学季为 October，同时部分课程提供 February Fast Track，因此相对于公立大学，时间比较灵活。2026/27 Academic Offer列出了10月第一批和部分2月Fast Track入学。'], timeline: [{ label: '提前9–12个月', text: '选专业' }, { label: '提前6–9个月', text: '准备作品集' }, { label: '提前3–6个月', text: '提交申请' }, { label: '录取后', text: '注册 → 签证' }] },
-      { title: '费用 & 奖学金', paragraphs: ['2026/27 Master of Arts 非欧盟学生标准费用约 €22,250/年；Academic Master部分非欧盟课程约 €23,800/年，具体课程费用需要以对应项目为准。NABA采用不同收入档位的费用机制，具体情况根据学生身份及相关经济材料确定。', 'NABA针对国际研究生提供 International Postgraduate Scholarship，2026/27学年最高可获得 €6,000 学费减免，主要评审材料包括 Portfolio、CV、Motivation Letter、成绩材料与语言证明。该轮奖学金申请截止日期为2026年5月27日。'] },
+      { title: '费用 & 奖学金', paragraphs: ['2026/27研究生课程参考：部分1年制课程约 €22,300–€23,800；2年制AFAM课程约 €20,800–€22,250/年，具体以对应项目及学生身份的官方报价为准。NABA采用不同收入档位的费用机制，具体情况根据学生身份及相关经济材料确定。', 'NABA针对国际研究生提供 International Postgraduate Scholarship，2026/27学年最高可获得 €6,000 学费减免，主要评审材料包括 Portfolio、CV、Motivation Letter、成绩材料与语言证明。该轮奖学金申请截止日期为2026年5月27日。'] },
     ],
   },
   'ied': {
@@ -267,6 +333,5 @@ export const schoolSpecialtyTranslations: Record<string, string> = {
   'Brand Strategy': '品牌战略',
   'Marketing & Communication': '市场营销与传播',
 }
-
 
 

@@ -19,6 +19,8 @@
 .hero-wordmark{width:min(100%,430px);height:92px;background-image:url('/images/hero-wordmark-transparent.png');mix-blend-mode:normal}.hero h2{width:min(100%,430px)}
 .hero-wordmark{width:min(100%,360px);height:76px}.hero h2{width:min(100%,360px)}
 .hero-wordmark{margin-bottom:8px}
+
+#services,#programs,#cases,#events{background:#000}
 .school-profile-content{max-width:980px;margin:70px 0 55px;border-top:1px solid #303030}.profile-section{padding:34px 0 38px;border-bottom:1px solid #292929}.profile-section>h2{font-size:25px;font-weight:700;letter-spacing:2px;margin:0 0 22px}.profile-section>p,.profile-group li{font-size:15px;line-height:2;color:#aaa}.profile-section>p{max-width:900px;margin:0 0 15px}.profile-group{margin:28px 0 0;padding:20px 22px;background:#111;border-left:2px solid #777}.profile-group h3{font-size:16px;font-weight:700;letter-spacing:1px;margin:0 0 12px}.profile-group ul{display:grid;grid-template-columns:repeat(2,1fr);gap:3px 32px;margin:0;padding-left:20px}.profile-group li{padding-left:4px}.profile-timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:30px}.timeline-item{border-top:1px solid #777;padding:15px 0}.timeline-item>span{font:11px 'DM Mono';color:#777}.timeline-item strong{display:block;font-size:15px;font-weight:700;margin-top:17px}.timeline-item p{font-size:13px;color:#aaa;line-height:1.7;margin:10px 0 0}.school-profile-content+.solid-button{margin-bottom:40px}
 @media(max-width:760px){.school-profile-content{margin-top:55px}.profile-section{padding:27px 0 30px}.profile-section>h2{font-size:22px}.profile-section>p,.profile-group li{font-size:14px}.profile-group{padding:16px}.profile-group ul{grid-template-columns:1fr;gap:2px 0}.profile-timeline{grid-template-columns:1fr 1fr;gap:20px 12px}.timeline-item strong{font-size:14px}}
 .school-visual{height:178px;position:relative;overflow:hidden;background:#090909;margin-bottom:12px}.school-photo{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.08);opacity:.72;transition:transform .5s ease,opacity .3s ease}.school:hover .school-photo{transform:scale(1.06);opacity:.9}.school-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.72))}.school-logo-frame{position:absolute;z-index:1;inset:8px 16px 34px;display:grid;place-items:center;background:rgba(0,0,0,.65);border:1px solid rgba(255,255,255,.16)}.school-logo{display:block;width:100%;height:105px;object-fit:contain;object-position:center;filter:grayscale(1) contrast(1.08);mix-blend-mode:screen}.school:nth-child(7) .school-logo{transform:scale(.8)}
@@ -44,6 +46,12 @@
 @media(max-width:1100px){.footer{grid-template-columns:minmax(230px,1fr) minmax(180px,230px) 96px;gap:22px}}
 @media(max-width:760px){.footer{display:flex;flex-direction:column;align-items:flex-start;gap:24px;padding:45px 0 115px}.footer-contact{gap:12px}.wechat-placeholder{align-self:flex-end}.footer-bottom{bottom:26px}.program-profile-content .profile-section:nth-child(2) .profile-group ul{gap:4px 20px}}
  .program-band{padding:78px 0 90px;border-top:1px solid #292929;background:#080808}.program-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.program-card{border:1px solid #292929;background:#111;display:block;overflow:hidden;transition:transform .25s,border-color .25s}.program-card:hover{transform:translateY(-5px);border-color:#777}.program-card>img{display:block;width:100%;height:150px;object-fit:cover;filter:grayscale(.55) contrast(1.06);transition:filter .25s,transform .35s}.program-card:hover>img{filter:grayscale(.1) contrast(1.04);transform:scale(1.03)}.program-card-body{position:relative;padding:18px 18px 20px;min-height:126px}.program-card-body>span{font:10px 'DM Mono';letter-spacing:1.5px;color:#777}.program-card-body h3{font-size:18px;font-weight:400;margin:15px 0 6px}.program-card-body p{font:11px 'DM Mono';color:#aaa;margin:0}.program-card-body svg{position:absolute;right:17px;bottom:19px;color:#aaa}.program-detail-english{font:16px 'DM Mono';letter-spacing:2px;color:#aaa;margin:-18px 0 42px}.program-detail-image{display:block;width:100%;height:min(48vw,520px);object-fit:cover;filter:grayscale(.25) contrast(1.04);margin-bottom:65px}.program-profile-content{max-width:980px;border-top:1px solid #303030;margin-bottom:45px}.program-school-tags{display:flex;flex-wrap:wrap;gap:10px}.program-school-tags span{border:1px solid #555;padding:12px 16px;color:#ddd;font-size:13px}@media(max-width:1100px){.program-grid{grid-template-columns:repeat(3,1fr)}}@media(max-width:760px){.program-grid{grid-template-columns:repeat(2,1fr);gap:10px}.program-card>img{height:115px}.program-card-body{padding:14px;min-height:118px}.program-card-body h3{font-size:15px}.program-detail-english{font-size:13px;margin-bottom:28px}.program-detail-image{height:250px;margin-bottom:40px}.program-school-tags span{font-size:12px;padding:10px 12px}}
+.school-logo-frame .school-logo{transform:translateY(-8px)}
+.school:nth-child(7) .school-logo{transform:translateY(-8px) scale(.8)}
+.school-profile-content .profile-group ul{grid-template-columns:1fr}
+@media(max-width:760px){.school-logo-frame .school-logo{transform:translateY(-6px)}.school:nth-child(7) .school-logo{transform:translateY(-6px) scale(.8)}}
+.hero-wordmark{margin-bottom:8px}
+
 /* Keep every featured-school card on the same visual rhythm. */
 .school-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;align-items:stretch}
 .school{display:grid;grid-template-rows:210px 1fr;min-height:292px;padding:0;border:1px solid #2d2d2d;background:#080808;overflow:hidden;transition:transform .25s ease,border-color .25s ease}
@@ -60,28 +68,21 @@
 .school>div:last-child span{white-space:normal;line-height:1.45;margin-top:7px}
 @media(max-width:1100px){.school-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.school{grid-template-rows:195px 1fr}.school-visual{height:195px}}
 @media(max-width:760px){.school-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.school{grid-template-rows:145px 1fr;min-height:228px;padding:0;border:1px solid #2d2d2d}.school-visual{height:145px}.school-logo-frame{inset:auto 9px;height:78px}.school>div:last-child{min-height:82px;padding:13px 12px 15px}.school-logo-frame .school-logo,.school:nth-child(7) .school-logo{transform:none}}
-
 .hero .hero-subtitle{font-size:29px;letter-spacing:5px;white-space:nowrap;width:max-content;max-width:none}
 @media(max-width:760px){.hero .hero-subtitle{font-size:29px;letter-spacing:2px}}
-
 .school>div:last-child .school-name-cn{font-size:18px;font-weight:400;color:#f4f4f1;letter-spacing:0;line-height:1.4;margin:0 0 7px}
 .school>div:last-child .school-name-en{font:11px 'DM Mono',monospace;font-weight:400;color:#aaa;letter-spacing:.4px;line-height:1.45;white-space:normal}
 @media(max-width:760px){.school>div:last-child .school-name-cn{font-size:15px;margin-bottom:6px}.school>div:last-child .school-name-en{font-size:10px}}
-
 .media-partners{padding:83px 0 90px;border-top:1px solid #292929}
 .media-partners-visual{height:min(44vw,660px);min-height:420px;overflow:hidden;border:1px solid #292929;background:#0a0b0d}
 .media-partners-visual img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;filter:contrast(1.03)}
 @media(max-width:760px){.media-partners{padding:60px 0}.media-partners-visual{height:520px;min-height:0}.media-partners-visual img{width:auto;max-width:none;height:100%;object-fit:cover;object-position:center}}
-
 .media-partners-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
 .media-partner-card{margin:0;aspect-ratio:880/382;border:1px solid #292929;background:#070809;overflow:hidden}
 .media-partner-card img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease,filter .3s ease}
 .media-partner-card:hover img{transform:scale(1.025);filter:brightness(1.08)}
 @media(max-width:760px){.media-partners-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}}
-
-
 .hero-desc{font-size:17px}
-
 .brand-image{width:260px;height:auto;aspect-ratio:1716/486;object-fit:contain}
 .footer .brand-image{width:300px;height:auto}
 @media(max-width:760px){.brand-image{width:220px}.footer .brand-image{width:230px;height:auto}}

@@ -19,15 +19,6 @@ export default function Home() {
       <section className="media-partners shell" id="cases"><div className="section-heading"><div><p className="eyebrow">MEDIA PARTNERS</p><h2>合作媒体平台</h2></div><p>携手时尚与生活方式媒体，共同连接创意、教育与行业影响力。</p></div><div className="media-partners-grid">{['时尚芭莎', 'ELLE', '嘉人 Marie Claire', '时尚 COSMO', '瑞丽网', '红秀 GRAZIA', '海报时尚网'].map((name, index) => <article className="media-partner-card" key={name}><Image src={`/images/media-partner-${index + 1}.jpg`} alt={`${name} 合作媒体`} width={880} height={382} /></article>)}</div></section>
       <section className="contact-strip shell" id="events"><p className="eyebrow">START YOUR JOURNEY</p><h2>让你的设计，被世界看见。</h2><Link className="solid-button" href="/contact">预约免费咨询 <ArrowRight size={16} /></Link></section>
     </main>
-<footer className="footer shell"><Brand /><div className="footer-contact"><span>☎　中国＋86 18222264646<br />　　意大利+39 3444236219</span><span>✉　邮箱待填写</span><span>⌖　地址待填写</span></div><div className="wechat-placeholder" aria-label="微信二维码待上传"><span>微信二维码</span><small>二维码待上传</small></div><div className="footer-bottom">© 2026 MISOLA 米岛时尚设计留学　All Rights Reserved.</div></footer>
+<footer className="footer shell"><Brand /><div className="footer-contact"><span>☎　中国＋86 18222264646<br />　　意大利+39 3444236219</span><span>✉　邮箱待填写</span><span>⌖　地址待填写</span></div><div className="wechat-placeholder" aria-label="微信二维码待上传"><span>微信二维码</span><small>二维码待上传</small></div><div className="footer-bottom">© MISOLA 米岛时尚设计留学　All Rights Reserved.</div></footer>
   </div>
 }
-
-
-
-
-
-
-
-
-
