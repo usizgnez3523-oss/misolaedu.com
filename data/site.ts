@@ -6,13 +6,13 @@ export const siteConfig = {
 }
 
 export const schools = [
-  { slug: 'politecnico-di-milano', name: 'POLITECNICO MILANO', cn: '米兰理工大学', mark: 'POLI', logo: '/images/school-politecnico-en.png', image: '/images/school-politecnico-campus.jpg', category: 'Design' },
-  { slug: 'istituto-marangoni', name: 'ISTITUTO MARANGONI', cn: '马兰欧尼时装与设计学院', mark: 'IM', logo: '/images/school-marangoni-en.png', image: '/images/school-marangoni-classroom.jpg', category: 'Fashion' },
-  { slug: 'domus-academy', name: 'DOMUS ACADEMY MILANO', cn: '多莫斯设计学院', mark: 'DA', logo: '/images/school-domus-en.png', image: '/images/school-domus-campus.jpg', category: 'Design' },
-  { slug: 'istituto-secoli', name: 'ISTITUTO SECOLI', cn: '卡罗世纪服装学院', mark: 'S', logo: '/images/school-secoli-en.png', image: '/images/school-secoli-studio.jpg', category: 'Fashion' },
-  { slug: 'naba', name: 'NABA', cn: '米兰新美术学院', mark: 'NABA', logo: '/images/school-naba-en.png', image: '/images/school-naba-studio.jpg', category: 'Design' },
-  { slug: 'polimoda', name: 'POLIMODA', cn: '柏丽慕达时装学院', mark: 'P', logo: '/images/school-polimoda-en.png', image: '/images/school-polimoda-campus.jpg', category: 'Fashion' },
-  { slug: 'ied', name: 'IED', cn: 'IED欧洲设计学院', mark: 'IED', logo: '/images/school-ied-en.png', image: '/images/school-ied-fashion.jpg', category: 'Design' },
+  { slug: 'politecnico-di-milano', name: 'POLITECNICO MILANO', cn: '米兰理工大学', mark: 'POLI', logo: '/images/school-politecnico-logo-user.jpg', image: '/images/school-politecnico-card.jpg', category: 'Design' },
+  { slug: 'istituto-marangoni', name: 'ISTITUTO MARANGONI', cn: '马兰欧尼时装与设计学院', mark: 'IM', logo: '/images/school-marangoni-logo-user.jpg', image: '/images/school-marangoni-card.jpg', category: 'Fashion' },
+  { slug: 'domus-academy', name: 'DOMUS ACADEMY MILANO', cn: '多莫斯设计学院', mark: 'DA', logo: '/images/school-domus-logo-user.jpg', image: '/images/school-domus-card.jpg', category: 'Design' },
+  { slug: 'istituto-secoli', name: 'ISTITUTO SECOLI', cn: '卡罗世纪服装学院', mark: 'S', logo: '/images/school-secoli-logo-user.jpg', image: '/images/school-secoli-card.jpg', category: 'Fashion' },
+  { slug: 'naba', name: 'NABA', cn: '米兰新美术学院', mark: 'NABA', logo: '/images/school-naba-logo-user.jpg', image: '/images/school-naba-card.jpg', category: 'Design' },
+  { slug: 'polimoda', name: 'POLIMODA', cn: '柏丽慕达时装学院', mark: 'P', logo: '/images/school-polimoda-logo-user.jpg', image: '/images/school-polimoda-card.jpg', category: 'Fashion' },
+  { slug: 'ied', name: 'IED', cn: 'IED欧洲设计学院', mark: 'IED', logo: '/images/school-ied-logo-user.jpg', image: '/images/school-ied-card.jpg', category: 'Design' },
 ]
 
 export const services = [
@@ -267,5 +267,6 @@ export const schoolSpecialtyTranslations: Record<string, string> = {
   'Brand Strategy': '品牌战略',
   'Marketing & Communication': '市场营销与传播',
 }
+
 
 
