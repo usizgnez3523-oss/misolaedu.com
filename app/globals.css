@@ -82,3 +82,6 @@
 
 .hero-desc{font-size:17px}
 
+.brand-image{width:260px;height:auto;aspect-ratio:1716/486;object-fit:contain}
+.footer .brand-image{width:300px;height:auto}
+@media(max-width:760px){.brand-image{width:220px}.footer .brand-image{width:230px;height:auto}}

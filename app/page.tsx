@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { programs, schools, services, siteConfig } from '@/data/site'
 
-function Brand() { return <Link className="brand" href="/"><Image className="brand-image" src="/images/logo-main.jpg" alt="MISOLA 米岛时尚设计留学" width={1600} height={900} priority /></Link> }
+function Brand() { return <Link className="brand" href="/"><Image className="brand-image" src="/images/logo-main-new.png" alt="MISOLA 米岛设计·时尚Atelier" width={1716} height={486} priority /></Link> }
 const icons = [GraduationCap, PencilRuler, Building2, Plane, UsersRound]
 
 export default function Home() {
@@ -22,6 +22,7 @@ export default function Home() {
 <footer className="footer shell"><Brand /><div className="footer-contact"><span>☎　联系方式待填写</span><span>✉　邮箱待填写</span><span>⌖　地址待填写</span></div><div className="wechat-placeholder" aria-label="微信二维码待上传"><span>微信二维码</span><small>二维码待上传</small></div><div className="footer-bottom">© 2026 MISOLA 米岛时尚设计留学　All Rights Reserved.</div></footer>
   </div>
 }
+
 
 
 
