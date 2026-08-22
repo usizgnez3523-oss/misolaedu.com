@@ -64,3 +64,7 @@
 .hero .hero-subtitle{font-size:29px;letter-spacing:5px;white-space:nowrap;width:max-content;max-width:none}
 @media(max-width:760px){.hero .hero-subtitle{font-size:29px;letter-spacing:2px}}
 
+.school>div:last-child .school-name-cn{font-size:18px;font-weight:400;color:#f4f4f1;letter-spacing:0;line-height:1.4;margin:0 0 7px}
+.school>div:last-child .school-name-en{font:11px 'DM Mono',monospace;font-weight:400;color:#aaa;letter-spacing:.4px;line-height:1.45;white-space:normal}
+@media(max-width:760px){.school>div:last-child .school-name-cn{font-size:15px;margin-bottom:6px}.school>div:last-child .school-name-en{font-size:10px}}
+
